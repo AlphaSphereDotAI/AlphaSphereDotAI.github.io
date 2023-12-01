@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Neura-X',
+      title: 'NeuraX',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: const Color(0xFF000000)),
       home: Scaffold(
