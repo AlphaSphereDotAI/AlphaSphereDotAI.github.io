@@ -1,3 +1,3 @@
-# Neura-X
+# NeuraX
 
-Neura-X Website
+NeuraX Website
