@@ -46,6 +46,24 @@ class _MyAppState extends State<MyApp> {
                 ],
                 repeatForever: false,
                 isRepeatingAnimation: false,
+              ),             
+ AnimatedTextKit(
+                animatedTexts: [
+                  TypewriterAnimatedText(
+                    'Undergraduate Student',
+                    textStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: (MediaQuery.of(context).size.width * 0.04 <
+                              MediaQuery.of(context).size.height * 0.04)
+                          ? MediaQuery.of(context).size.width * 0.04
+                          : MediaQuery.of(context).size.height * 0.04,
+                      fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
+                    ),
+                    speed: const Duration(milliseconds: 100),
+                  ),
+                ],
+                repeatForever: false,
+                isRepeatingAnimation: false,
               ),
               const SizedBox(
                 height: 20,
