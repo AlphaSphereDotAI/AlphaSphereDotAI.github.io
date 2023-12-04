@@ -47,10 +47,10 @@ class _MyAppState extends State<MyApp> {
                 repeatForever: false,
                 isRepeatingAnimation: false,
               ),             
- AnimatedTextKit(
+              AnimatedTextKit(
                 animatedTexts: [
                   TypewriterAnimatedText(
-                    'Undergraduate Student',
+                    'We are a 3-member Team. We are actively researching artificial intelligence and constantly looking for new ways to learn about it. We are committed to consistently developing our experience in this field and enhancing our skill set, all while embracing our love of learning and employing artificial intelligence to advance our career prospects.',
                     textStyle: TextStyle(
                       color: Colors.white,
                       fontSize: (MediaQuery.of(context).size.width * 0.04 <
