@@ -20,7 +20,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NeuraX',
+      title: 'AlphaSphere.AI',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: const Color(0xFF000000)),
       home: Scaffold(
@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
               AnimatedTextKit(
                 animatedTexts: [
                   TypewriterAnimatedText(
-                    'NeuraX',
+                    'AlphaSphere.AI',
                     textStyle: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
               AnimatedTextKit(
                 animatedTexts: [
                   TypewriterAnimatedText(
-                    'We are a Team. We are actively researching artificial intelligence and constantly looking for new ways to learn about it. We are committed to consistently developing our experience in this field and enhancing our skill set, all while embracing our love of learning and employing artificial intelligence to advance our career prospects.',
+                    '',
                     textStyle: TextStyle(
                       color: Colors.white,
                       fontSize: (MediaQuery.of(context).size.width * 0.04 <
@@ -70,7 +70,7 @@ class _MyAppState extends State<MyApp> {
               ),
               Link(
                 target: LinkTarget.blank,
-                uri: Uri.parse('MAILTO:NeuraX@googlegroups.com'),
+                uri: Uri.parse('MAILTO:AlphaSphereDotAI@googlegroups.com'),
                 builder: (context, followLink) => OutlinedButton(
                   onPressed: followLink,
                   child: AnimatedTextKit(
@@ -106,7 +106,7 @@ class _MyAppState extends State<MyApp> {
                 children: [
                   Link(
                     target: LinkTarget.blank,
-                    uri: Uri.parse('https://GitHub.com/Neura-X'),
+                    uri: Uri.parse('https://GitHub.com/AlphaSphereDotAI'),
                     builder: (context, followLink) => IconButton(
                       color: Colors.white,
                       iconSize: (MediaQuery.of(context).size.width * 0.05 <
