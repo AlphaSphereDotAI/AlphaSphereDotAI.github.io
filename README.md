@@ -1,3 +1,3 @@
-# NeuraX
+# AlphaSphere.AI
 
-NeuraX Website
+AlphaSphere.AI Website
