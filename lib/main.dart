@@ -77,7 +77,7 @@ class _MyAppState extends State<MyApp> {
                     onTap: followLink,
                     animatedTexts: [
                       TypewriterAnimatedText(
-                        'NeuraX@googlegroups.com',
+                        'AlphaSphereDotAI@googlegroups.com',
                         textStyle: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
