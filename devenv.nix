@@ -14,7 +14,6 @@ in {
   };
   # https://devenv.sh/basics/
   env = {
-    GREET = "devenv";
     UV_PYTHON_DOWNLOADS = lib.mkDefault "automatic";
     UV_PYTHON_PREFERENCE = lib.mkDefault "managed";
   };
