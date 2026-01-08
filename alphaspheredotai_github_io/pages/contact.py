@@ -21,15 +21,24 @@ def contact_page() -> rx.Component:
                     rx.divider(),
                     rx.hstack(
                         (
-                            contact_item("GitHub", "https://github.com/AlphaSphereDotAI"),
                             contact_item(
-                                "Kaggle", "https://kaggle.com/organizations/AlphaSphereDotAI"
+                                "GitHub", "https://github.com/AlphaSphereDotAI"
                             ),
-                            contact_item("Hugging Face", "https://huggingface.co/AlphaSphereDotAI"),
                             contact_item(
-                                "LinkedIn", "https://linkedin.com/company/AlphaSphereDotAI"
+                                "Kaggle",
+                                "https://kaggle.com/organizations/AlphaSphereDotAI",
                             ),
-                            contact_item("X", "https://x.com/AlphaSphereAI", "@AlphaSphereAI"),
+                            contact_item(
+                                "Hugging Face",
+                                "https://huggingface.co/AlphaSphereDotAI",
+                            ),
+                            contact_item(
+                                "LinkedIn",
+                                "https://linkedin.com/company/AlphaSphereDotAI",
+                            ),
+                            contact_item(
+                                "X", "https://x.com/AlphaSphereAI", "@AlphaSphereAI"
+                            ),
                         ),
                         align="center",
                         justify="center",
