@@ -2,8 +2,7 @@
   pkgs,
   lib,
   ...
-}:
-{
+}: {
   # https://devenv.sh/basics/
   env = {
     GREET = "devenv";
@@ -12,7 +11,7 @@
   };
 
   # https://devenv.sh/packages/
-  packages = [ ];
+  packages = [];
 
   # https://devenv.sh/languages/
   languages.python = {
@@ -86,7 +85,7 @@
     trim-trailing-whitespace.enable = true;
     trufflehog.enable = true;
     uv-check.enable = true;
-    uv-export.enable = true;
+    # uv-export.enable = true;
     uv-lock.enable = true;
     yamllint.enable = true;
   };
