@@ -30,9 +30,13 @@
   # services.postgres.enable = true;
 
   # https://devenv.sh/scripts/
-  scripts.hello.exec = ''
-    echo hello from $GREET
-  '';
+  scripts = {
+    build-web.exec = ''
+      ${lib.getExe pkgs.uv} --version
+      ${lib.getExe pkgs.python313Packages.reflex} --version
+      ${lib.getExe pkgs.python313Packages.reflex} export --frontend-only --no-zip --env prod
+    '';
+  };
 
   # https://devenv.sh/basics/
   enterShell = ''
