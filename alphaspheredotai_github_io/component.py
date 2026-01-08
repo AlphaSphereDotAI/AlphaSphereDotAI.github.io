@@ -6,7 +6,8 @@ from alphaspheredotai_github_io.team.team_member import TeamMember
 def _navbar_item_desktop_only(text: str, icon: str, url: str) -> rx.Component:
     """Create a navbar item for desktop view."""
     return rx.link(
-        rx.hstack(rx.icon(icon), rx.text(text, size="4", weight="medium")), href=url
+        rx.hstack(rx.icon(icon), rx.text(text, size="4", weight="medium")),
+        href=url,
     )
 
 
@@ -41,7 +42,9 @@ def navbar_icons() -> rx.Component:
                     rx.menu.content(
                         _navbar_item_mobile_and_tablet("Home", "home", "/"),
                         _navbar_item_mobile_and_tablet(
-                            "Projects", "code-xml", "/projects"
+                            "Projects",
+                            "code-xml",
+                            "/projects",
                         ),
                         _navbar_item_mobile_and_tablet("Contact", "mail", "/contact"),
                         rx.color_mode.button(),

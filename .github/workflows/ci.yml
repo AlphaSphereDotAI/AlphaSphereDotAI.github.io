@@ -55,7 +55,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
         if: success() || failure()
         with:
-          commit_message: 'devenv: Apply Fixes'
+          commit_message: "devenv: Apply Fixes"
           commit_options: --no-verify
   build_web:
     name: Build Web
