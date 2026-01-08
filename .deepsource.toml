@@ -6,7 +6,7 @@ name = "secrets"
 [[analyzers]]
 name = "python"
 
-[analyzers.meta]  
+[analyzers.meta]
 max_line_length = 120
 skip_doc_coverage = ["module", "magic", "init"]
 additional_builtins = ["_", "pretty_output"]
