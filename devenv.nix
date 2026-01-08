@@ -2,7 +2,16 @@
   pkgs,
   lib,
   ...
-}: {
+}: let
+  yamllint_config = ".github/lint/.yamllint.yaml";
+in {
+  files.${yamllint_config}.yaml = {
+    extends = "default";
+    rules = {
+      document-start = "disable";
+      truthy = "disable";
+    };
+  };
   # https://devenv.sh/basics/
   env = {
     GREET = "devenv";
