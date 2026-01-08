@@ -11,6 +11,7 @@ in {
       document-start = "disable";
       truthy = "disable";
       comments = "disable";
+      line-length.max = 120;
     };
   };
   # https://devenv.sh/basics/
