@@ -56,7 +56,7 @@ def contact() -> rx.Component:
                         contact_item("Kaggle", "https://kaggle.com/organizations/AlphaSphereDotAI"),
                         contact_item("Hugging Face", "https://huggingface.co/AlphaSphereDotAI"),
                         contact_item("LinkedIn", "https://linkedin.com/company/AlphaSphereDotAI"),
-                        contact_item("Twitter", "https://twitter.com/AlphaSphereAI"),
+                        contact_item("X", "https://x.com/AlphaSphereAI", "@AlphaSphereAI"),
                     ),
                     align="center",
                     justify="center",
