@@ -6,8 +6,8 @@ name = "secrets"
 [[analyzers]]
 name = "python"
 
-  [analyzers.meta]
-  runtime_version = "3.x.x"
+[analyzers.meta]
+runtime_version = "3.x.x"
 
 [[code_formatters]]
 name = "ruff"
