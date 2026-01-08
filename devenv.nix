@@ -10,6 +10,7 @@ in {
     rules = {
       document-start = "disable";
       truthy = "disable";
+      comments = "disable";
     };
   };
   # https://devenv.sh/basics/
