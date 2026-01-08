@@ -41,6 +41,7 @@ in {
   # https://devenv.sh/scripts/
   scripts = {
     build-web.exec = ''
+      echo "Building web with Reflex"
       ${lib.getExe pkgs.uv} --version
       ${lib.getExe pkgs.python313Packages.reflex} --version
       ${lib.getExe pkgs.python313Packages.reflex} export --frontend-only --no-zip --env prod
