@@ -1,0 +1,24 @@
+[project]
+name = "alphaspheredotai-github-io"
+version = "0.0.1"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Mohamed Hisham Abdelzaher", email = "mohamed.hisham.abdelzaher@gmail.com" }
+]
+requires-python = ">=3.13,<3.14"
+dependencies = [    "reflex>=0.8.24.post1"]
+
+[project.scripts]
+alphaspheredotai-github-io = "alphaspheredotai_github_io:main"
+
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.10",
+    "ty>=0.0.10",
+    "uv-build>=0.9.22",
+]
