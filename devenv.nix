@@ -1,8 +1,14 @@
-{ pkgs, lib, config, inputs, ... }:
-
 {
+  pkgs,
+  lib,
+  ...
+}: {
   # https://devenv.sh/basics/
-  env.GREET = "devenv";
+  env = {
+    GREET = "devenv";
+    UV_PYTHON_DOWNLOADS = lib.mkDefault "automatic";
+    UV_PYTHON_PREFERENCE = lib.mkDefault "managed";
+  };
 
   # https://devenv.sh/packages/
   packages = [ pkgs.git ];
