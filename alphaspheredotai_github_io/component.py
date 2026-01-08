@@ -12,6 +12,7 @@ def _navbar_item_mobile_and_tablet(text: str, icon: str, url: str) -> rx.Compone
 
 
 def navbar_icons() -> rx.Component:
+    """Create the navbar with icons for desktop and mobile/tablet."""
     return rx.box(
         (
             rx.desktop_only(
@@ -32,9 +33,7 @@ def navbar_icons() -> rx.Component:
                     rx.menu.trigger(rx.icon("menu", size=30)),
                     rx.menu.content(
                         _navbar_item_mobile_and_tablet("Home", "home", "/"),
-                        _navbar_item_mobile_and_tablet(
-                            "Projects", "code-xml", "/projects"
-                        ),
+                        _navbar_item_mobile_and_tablet("Projects", "code-xml", "/projects"),
                         _navbar_item_mobile_and_tablet("Contact", "mail", "/contact"),
                         rx.color_mode.button(),
                     ),
@@ -50,8 +49,12 @@ def navbar_icons() -> rx.Component:
 
 
 def contact_item(
-    name: str, url: str, avatar: str, username: str = "@AlphaSphereDotAI"
+    name: str,
+    url: str,
+    avatar: str,
+    username: str = "@AlphaSphereDotAI",
 ) -> rx.Component:
+    """Create a contact item card."""
     return rx.card(
         rx.flex(
             (
@@ -59,10 +62,7 @@ def contact_item(
                 rx.heading(name, size="4", weight="bold"),
                 rx.text(username, color_scheme="gray"),
                 rx.button(
-                    (
-                        rx.text("link"),
-                        rx.icon("link", size=16, color="gray"),
-                    ),
+                    (rx.text("link"), rx.icon("link", size=16, color="gray")),
                     variant="soft",
                     on_click=rx.redirect(url, is_external=True),
                 ),
@@ -70,5 +70,5 @@ def contact_item(
             direction="column",
             spacing="1",
             align="center",
-        )
+        ),
     )
