@@ -11,7 +11,7 @@
   };
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  packages = [ ];
 
   # https://devenv.sh/languages/
   languages.python = {
