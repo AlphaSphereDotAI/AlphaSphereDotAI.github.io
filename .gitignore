@@ -9,3 +9,5 @@ __pycache__/
 .web
 .states
 *.db
+.ruff.toml
+.yamllint.yaml
