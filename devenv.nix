@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   # https://devenv.sh/basics/
   env = {
     GREET = "devenv";
@@ -16,6 +17,7 @@
   # https://devenv.sh/languages/
   languages.python = {
     enable = true;
+    # version = "3.14";
     uv = {
       enable = true;
       sync.enable = true;
