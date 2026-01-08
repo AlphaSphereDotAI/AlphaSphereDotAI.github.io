@@ -1,6 +1,6 @@
 import reflex as rx
 
-from alphaspheredotai_github_io.component import navbar_icons
+from alphaspheredotai_github_io.component import contact_item, navbar_icons
 
 
 def contact_page() -> rx.Component:
