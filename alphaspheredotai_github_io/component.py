@@ -7,10 +7,8 @@ def _navbar_item_desktop_only(text: str, icon: str, url: str) -> rx.Component:
 
 
 def _navbar_item_mobile_and_tablet(text: str, icon: str, url: str) -> rx.Component:
-    return rx.link(
-        rx.hstack(rx.icon(icon, size=16), rx.text(text, size="3", weight="medium")),
-        href=url,
-    )
+    """Create a navbar item for mobile and tablet view."""
+    return rx.link(rx.hstack(rx.icon(icon, size=16), rx.text(text, size="3", weight="medium")), href=url)
 
 
 def navbar_icons() -> rx.Component:
