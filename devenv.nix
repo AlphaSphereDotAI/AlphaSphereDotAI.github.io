@@ -52,7 +52,41 @@
   '';
 
   # https://devenv.sh/git-hooks/
-  # git-hooks.hooks.shellcheck.enable = true;
-
+  git-hooks.hooks = {
+    action-validator.enable = true;
+    actionlint.enable = true;
+    alejandra.enable = true;
+    check-added-large-files.enable = true;
+    check-builtin-literals.enable = true;
+    check-case-conflicts.enable = true;
+    check-docstring-first.enable = true;
+    check-json.enable = true;
+    check-merge-conflicts.enable = true;
+    check-python.enable = true;
+    check-toml.enable = true;
+    check-vcs-permalinks.enable = true;
+    check-xml.enable = true;
+    check-yaml.enable = true;
+    comrak.enable = true;
+    deadnix.enable = true;
+    detect-private-keys.enable = true;
+    lychee.enable = true;
+    markdownlint.enable = true;
+    mixed-line-endings.enable = true;
+    name-tests-test.enable = true;
+    prettier.enable = true;
+    python-debug-statements.enable = true;
+    ripsecrets.enable = true;
+    ruff.enable = true;
+    ruff-format.enable = true;
+    statix.enable = true;
+    taplo.enable = true;
+    trim-trailing-whitespace.enable = true;
+    trufflehog.enable = true;
+    uv-check.enable = true;
+    uv-export.enable = true;
+    uv-lock.enable = true;
+    yamllint.enable = true;
+  };
   # See full reference at https://devenv.sh/reference/options/
 }
