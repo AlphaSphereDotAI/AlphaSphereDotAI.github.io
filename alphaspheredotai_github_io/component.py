@@ -1,5 +1,7 @@
 import reflex as rx
 
+from alphaspheredotai_github_io.team.team_member import TeamMember
+
 
 def _navbar_item_desktop_only(text: str, icon: str, url: str) -> rx.Component:
     """Create a navbar item for desktop view."""
@@ -73,6 +75,23 @@ def contact_item(
                     variant="soft",
                     on_click=rx.redirect(url, is_external=True),
                 ),
+            ),
+            direction="column",
+            spacing="1",
+            align="center",
+        ),
+    )
+
+
+def team_member_card(team_member: TeamMember) -> rx.Component:
+    """Create a team member card."""
+    return rx.card(
+        rx.flex(
+            (
+                rx.avatar(src=team_member.avatar, size="xl"),
+                rx.heading(team_member.name, size="4", weight="bold"),
+                rx.text(team_member.role, color_scheme="gray", italic=True),
+                rx.text(team_member.bio, text_align="center"),
             ),
             direction="column",
             spacing="1",
