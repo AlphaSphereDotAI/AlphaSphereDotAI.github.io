@@ -2,7 +2,7 @@
 
 import reflex as rx
 
-from alphaspheredotai_github_io.pages import contact_page, home_page, projects_page
+from alphaspheredotai_github_io.pages import contact_page, home_page, projects_page, team_page
 
 app = rx.App(theme=rx.theme(radius="large", accent_color="gray"))
 
@@ -20,3 +20,8 @@ def projects() -> rx.Component:
 @rx.page(route="/contact", title="Contact")
 def contact() -> rx.Component:
     return contact_page
+
+
+@rx.page(route="/team", title="Team")
+def team() -> rx.Component:
+    return team_page
