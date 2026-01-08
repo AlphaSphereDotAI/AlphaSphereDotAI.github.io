@@ -4,6 +4,7 @@ from alphaspheredotai_github_io.component import contact_item, navbar_icons
 
 
 def contact_page() -> rx.Component:
+    """Contact page component."""
     return rx.container(
         (
             navbar_icons(),

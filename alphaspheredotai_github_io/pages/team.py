@@ -4,6 +4,7 @@ from alphaspheredotai_github_io.component import navbar_icons
 
 
 def team_page() -> rx.Component:
+    """Team page component."""
     return rx.container(
         (
             navbar_icons(),

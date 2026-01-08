@@ -4,6 +4,7 @@ from alphaspheredotai_github_io.component import navbar_icons
 
 
 def home_page() -> rx.Component:
+    """Home page component."""
     return rx.box(
         rx.container(
             navbar_icons(),

@@ -4,6 +4,7 @@ from alphaspheredotai_github_io.component import navbar_icons
 
 
 def projects_page() -> rx.Component:
+    """Projects page component."""
     return rx.container(
         (
             navbar_icons(),
