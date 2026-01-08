@@ -98,7 +98,10 @@ in {
     uv-check.enable = true;
     # uv-export.enable = true;
     uv-lock.enable = true;
-    yamllint.enable = true;
+    yamllint = {
+      enable = true;
+      settings.configPath = yamllint_config;
+    };
   };
   # See full reference at https://devenv.sh/reference/options/
 
