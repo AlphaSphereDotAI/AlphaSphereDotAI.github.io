@@ -2,16 +2,49 @@
   pkgs,
   lib,
   ...
-}: let
-  yamllint_config = ".github/lint/.yamllint.yaml";
-in {
-  files.${yamllint_config}.yaml = {
-    extends = "default";
-    rules = {
-      document-start = "disable";
-      truthy = "disable";
-      comments = "disable";
-      line-length.max = 120;
+}: {
+  files = {
+    ".yamllint.yaml".yaml = {
+      extends = "default";
+      rules = {
+        document-start = "disable";
+        truthy = "disable";
+        comments = "disable";
+        line-length.max = 120;
+      };
+    };
+    ".ruff.toml".toml = {
+      target-version = "py313";
+      line-length = 120;
+      lint = {
+        fixable = ["ALL"];
+        ignore = [
+          "D100"
+          "D105"
+          "D107"
+          "D212"
+          "D413"
+          "SIM117"
+        ];
+        select = ["ALL"];
+        isort = {
+          combine-as-imports = true;
+        };
+        per-file-ignores = {
+          "test_app.py" = [
+            "INP001"
+            "S101"
+          ];
+        };
+      };
+      format = {
+        docstring-code-format = false;
+        docstring-code-line-length = "dynamic";
+        indent-style = "space";
+        line-ending = "lf";
+        quote-style = "double";
+        skip-magic-trailing-comma = false;
+      };
     };
   };
   # https://devenv.sh/basics/
@@ -109,10 +142,7 @@ in {
     uv-check.enable = true;
     # uv-export.enable = true;
     uv-lock.enable = true;
-    yamllint = {
-      enable = true;
-      settings.configPath = yamllint_config;
-    };
+    yamllint.enable = true;
   };
 
   treefmt = {
