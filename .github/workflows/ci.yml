@@ -21,14 +21,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5.0.0
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7.0.0
+      - name: Install Nix
+        uses: DeterminateSystems/determinate-nix-action@1d699fc25db3f9e079cd2f168ca007a4183389be # v3.15.1
         with:
-          enable-cache: true
-          cache-dependency-glob: 'uv.lock'
-          activate-environment: true
-      - name: Install the project
-        run: uv sync --frozen --no-install-project
+          logger: pretty
+      - name: Cache
+        uses: DeterminateSystems/magic-nix-cache-action@565684385bcd71bad329742eefe8d12f2e765b39 # v13
+      - name: Install devenv.sh
+        run: nix profile install nixpkgs#devenv
+      - name: Check Compatibility
+        run: devenv shell compatibility-check
   build_web:
     name: Build Web
     runs-on: ubuntu-latest
