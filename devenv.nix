@@ -43,8 +43,8 @@ in {
     build-web.exec = ''
       echo "Building web with Reflex"
       ${lib.getExe pkgs.uv} --version
-      ${lib.getExe pkgs.python313Packages.reflex} --version
-      ${lib.getExe pkgs.python313Packages.reflex} export --frontend-only --no-zip --env prod
+      ${lib.getExe pkgs.uv} run reflex --version
+      ${lib.getExe pkgs.uv} run reflex export --frontend-only --no-zip --env prod
     '';
     compatibility-check.exec = ''
       echo "Checking compatibility"
@@ -52,7 +52,7 @@ in {
     '';
     start-dev.exec = ''
       echo "Starting development server"
-      ${lib.getExe pkgs.python313Packages.reflex} run
+      ${lib.getExe pkgs.uv} run reflex run
     '';
   };
 
