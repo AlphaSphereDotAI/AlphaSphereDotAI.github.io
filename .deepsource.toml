@@ -6,8 +6,11 @@ name = "secrets"
 [[analyzers]]
 name = "python"
 
-[analyzers.meta]
-runtime_version = "3.x.x"
+[analyzers.meta]  
+max_line_length = 120
+skip_doc_coverage = ["module", "magic", "init"]
+additional_builtins = ["_", "pretty_output"]
+type_checker = "mypy"
 
 [[code_formatters]]
 name = "ruff"
