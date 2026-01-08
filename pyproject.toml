@@ -9,12 +9,5 @@ authors = [
 requires-python = ">=3.13,<3.14"
 dependencies = ["reflex>=0.8.24.post1"]
 
-[project.scripts]
-alphaspheredotai-github-io = "alphaspheredotai_github_io:main"
-
-[build-system]
-requires = ["uv_build"]
-build-backend = "uv_build"
-
 [dependency-groups]
-dev = ["ruff>=0.14.10", "ty>=0.0.10", "uv-build>=0.9.22"]
+dev = ["ruff>=0.14.10", "ty>=0.0.10"]
