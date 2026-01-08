@@ -109,7 +109,17 @@ in {
       settings.configPath = yamllint_config;
     };
   };
-  # See full reference at https://devenv.sh/reference/options/
+
+  treefmt = {
+    enable = true;
+    config.programs = {
+      ruff-check = {
+        enable = true;
+        # extendSelect = [ "I" ];
+      };
+    };
+  };
 
   difftastic.enable = true;
+  # See full reference at https://devenv.sh/reference/options/
 }
