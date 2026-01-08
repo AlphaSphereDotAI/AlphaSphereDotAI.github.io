@@ -45,6 +45,10 @@ in {
       ${lib.getExe pkgs.python313Packages.reflex} --version
       ${lib.getExe pkgs.python313Packages.reflex} export --frontend-only --no-zip --env prod
     '';
+    compatibility-check.exec = ''
+      echo "Checking compatibility"
+      ${lib.getExe pkgs.uv} sync --frozen --no-install-project
+    '';
   };
 
   # https://devenv.sh/basics/
