@@ -50,6 +50,10 @@ in {
       echo "Checking compatibility"
       ${lib.getExe pkgs.uv} sync --frozen --no-install-project
     '';
+    start-dev.exec = ''
+      echo "Starting development server"
+      ${lib.getExe pkgs.python313Packages.reflex} run
+    '';
   };
 
   # https://devenv.sh/basics/
