@@ -12,11 +12,6 @@ def projects_page() -> rx.Component:
                 rx.flex(
                     (
                         project_card(
-                            title="AlphaSphereDotAI Website",
-                            description="A personal website built with Reflex to showcase projects and team members.",
-                            project_url="https://github.com/AlphaSphereDotAI/AlphaSphereDotAI.github.io",
-                        ),
-                        project_card(
                             title="Chatacter",
                             description="Live Chat with Virtual Character.",
                             project_url="https://github.com/AlphaSphereDotAI/chatacter",
