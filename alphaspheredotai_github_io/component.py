@@ -75,10 +75,16 @@ def contact_item(
                 rx.avatar(src=avatar),
                 rx.heading(name, size="4", weight="bold"),
                 rx.text(username, color_scheme="gray"),
-                rx.button(
-                    (rx.text("link"), rx.icon("link", size=16, color="gray")),
-                    variant="soft",
-                    on_click=rx.redirect(url, is_external=True),
+                rx.link(
+                    rx.button(
+                        (
+                            rx.text("link"),
+                            rx.icon("link", size=16, color="gray"),
+                        ),
+                        variant="soft",
+                    ),
+                    href=url,
+                    is_external=True,
                 ),
             ),
             direction="column",
