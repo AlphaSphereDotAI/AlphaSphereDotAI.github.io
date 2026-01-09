@@ -6,7 +6,8 @@ from alphaspheredotai_github_io.team.team_member import TeamMember
 def _navbar_item_desktop_only(text: str, icon: str, url: str) -> rx.Component:
     """Create a navbar item for desktop view."""
     return rx.link(
-        rx.hstack(rx.icon(icon), rx.text(text, size="4", weight="medium")), href=url
+        rx.hstack(rx.icon(icon), rx.text(text, size="4", weight="medium")),
+        href=url,
     )
 
 
@@ -26,6 +27,7 @@ def navbar_icons() -> rx.Component:
                 rx.hstack(
                     (
                         _navbar_item_desktop_only("Home", "home", "/"),
+                        _navbar_item_desktop_only("Team", "users", "/team"),
                         _navbar_item_desktop_only("Projects", "code-xml", "/projects"),
                         _navbar_item_desktop_only("Contact", "mail", "/contact"),
                         rx.color_mode.button(),
@@ -40,8 +42,11 @@ def navbar_icons() -> rx.Component:
                     rx.menu.trigger(rx.icon("menu", size=30)),
                     rx.menu.content(
                         _navbar_item_mobile_and_tablet("Home", "home", "/"),
+                        _navbar_item_mobile_and_tablet("Team", "users", "/team"),
                         _navbar_item_mobile_and_tablet(
-                            "Projects", "code-xml", "/projects"
+                            "Projects",
+                            "code-xml",
+                            "/projects",
                         ),
                         _navbar_item_mobile_and_tablet("Contact", "mail", "/contact"),
                         rx.color_mode.button(),
@@ -83,18 +88,50 @@ def contact_item(
     )
 
 
+def socialmedia_links(link: str, socialmedia_type: str) -> rx.Component:
+    """Create social media links component."""
+    return rx.link(
+        rx.icon(socialmedia_type, size=24),
+        href=link,
+        is_external=True,
+    )
+
+
 def team_member_card(team_member: TeamMember) -> rx.Component:
     """Create a team member card."""
     return rx.card(
         rx.flex(
             (
-                rx.avatar(src=team_member.avatar, size="xl"),
-                rx.heading(team_member.name, size="4", weight="bold"),
-                rx.text(team_member.role, color_scheme="gray", italic=True),
-                rx.text(team_member.bio, text_align="center"),
+                rx.avatar(src=team_member.avatar, size="9"),
+                rx.flex(
+                    (
+                        rx.heading(team_member.name, size="4", weight="bold"),
+                        rx.text(team_member.role, color_scheme="gray", italic=True),
+                        rx.text(team_member.bio, text_align="center"),
+                        rx.flex(
+                            (
+                                socialmedia_links(team_member.social_links.github, "github"),
+                                socialmedia_links(team_member.social_links.linkedin, "linkedin"),
+                                socialmedia_links(team_member.social_links.twitter, "twitter")
+                                if team_member.social_links.twitter
+                                else None,
+                            ),
+                            direction="row",
+                            align="center",
+                            size="5",
+                            spacing="5",
+                            flex_wrap="wrap",
+                        ),
+                    ),
+                    direction="column",
+                    align="center",
+                    spacing="2",
+                ),
             ),
             direction="column",
-            spacing="1",
             align="center",
+            spacing="5",
         ),
+        size="5",
+        direction="column",
     )
