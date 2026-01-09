@@ -9,7 +9,7 @@ from alphaspheredotai_github_io.pages import (
     team_page,
 )
 
-app = rx.App(theme=rx.theme(radius="large", accent_color="gray"))
+app = rx.App(theme=rx.theme(radius="large", accent_color="gray"), enable_state=False)
 
 
 @rx.page(route="/", title="AlphaSphere.AI")
