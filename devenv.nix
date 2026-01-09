@@ -89,7 +89,7 @@
     '';
     start-dev.exec = ''
       echo "Starting development server"
-      ${lib.getExe pkgs.uv} run reflex run
+      ${lib.getExe pkgs.uv} run reflex run --frontend-only
     '';
   };
 
