@@ -12,7 +12,7 @@ from alphaspheredotai_github_io.pages import (
 app = rx.App(theme=rx.theme(radius="large", accent_color="gray"))
 
 
-@rx.page(route="/", title="Home Page")
+@rx.page(route="/", title="AlphaSphere.AI")
 def index() -> rx.Component:
     """Home page."""
     return home_page
