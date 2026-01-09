@@ -19,7 +19,7 @@ jobs:
       name: code_quality
     steps:
       - name: Checkout repository
-        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
       - name: Install Nix
         uses: DeterminateSystems/determinate-nix-action@1d699fc25db3f9e079cd2f168ca007a4183389be # v3.15.1
         with:
@@ -37,7 +37,7 @@ jobs:
       name: code_quality
     steps:
       - name: Checkout repository
-        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           token: ${{ secrets.GH_TOKEN }}
       - name: Install Nix
@@ -64,7 +64,7 @@ jobs:
       name: build
     steps:
       - name: Checkout repository
-        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
       - name: Install Nix
         uses: DeterminateSystems/determinate-nix-action@1d699fc25db3f9e079cd2f168ca007a4183389be # v3.15.1
         with:
