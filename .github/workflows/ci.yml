@@ -19,13 +19,13 @@ jobs:
       name: code_quality
     steps:
       - name: Checkout repository
-        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+        uses: actions/checkout@v5.0.0
       - name: Install Nix
-        uses: DeterminateSystems/determinate-nix-action@1d699fc25db3f9e079cd2f168ca007a4183389be # v3.15.1
-        with:
-          logger: pretty
+        uses: cachix/install-nix-action@v31.9.0
       - name: Cache
-        uses: DeterminateSystems/magic-nix-cache-action@565684385bcd71bad329742eefe8d12f2e765b39 # v13
+        uses: cachix/cachix-action@v16
+        with:
+          name: devenv
       - name: Install devenv.sh
         run: nix profile install nixpkgs#devenv
       - name: Check Compatibility
@@ -41,11 +41,11 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
       - name: Install Nix
-        uses: DeterminateSystems/determinate-nix-action@1d699fc25db3f9e079cd2f168ca007a4183389be # v3.15.1
-        with:
-          logger: pretty
+        uses: cachix/install-nix-action@v31.9.0
       - name: Cache
-        uses: DeterminateSystems/magic-nix-cache-action@565684385bcd71bad329742eefe8d12f2e765b39 # v13
+        uses: cachix/cachix-action@v16
+        with:
+          name: devenv
       - name: Install devenv.sh
         run: nix profile install nixpkgs#devenv
       - name: Test
@@ -66,11 +66,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
       - name: Install Nix
-        uses: DeterminateSystems/determinate-nix-action@1d699fc25db3f9e079cd2f168ca007a4183389be # v3.15.1
-        with:
-          logger: pretty
+        uses: cachix/install-nix-action@v31.9.0
       - name: Cache
-        uses: DeterminateSystems/magic-nix-cache-action@565684385bcd71bad329742eefe8d12f2e765b39 # v13
+        uses: cachix/cachix-action@v16
+        with:
+          name: devenv
       - name: Install devenv.sh
         run: nix profile install nixpkgs#devenv
       - name: Cache .web
