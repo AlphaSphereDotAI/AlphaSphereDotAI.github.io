@@ -111,13 +111,16 @@ def team_member_card(team_member: TeamMember) -> rx.Component:
                         rx.flex(
                             (
                                 socialmedia_links(
-                                    team_member.social_links.github, "github"
+                                    team_member.social_links.github,
+                                    "github",
                                 ),
                                 socialmedia_links(
-                                    team_member.social_links.linkedin, "linkedin"
+                                    team_member.social_links.linkedin,
+                                    "linkedin",
                                 ),
                                 socialmedia_links(
-                                    team_member.social_links.twitter, "twitter"
+                                    team_member.social_links.twitter,
+                                    "twitter",
                                 )
                                 if team_member.social_links.twitter
                                 else None,
