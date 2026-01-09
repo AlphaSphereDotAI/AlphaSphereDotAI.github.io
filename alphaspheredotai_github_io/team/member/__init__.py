@@ -1,5 +1,7 @@
 from alphaspheredotai_github_io.team.member.abdelrahman_amin import AbdelrahmanAmin
-from alphaspheredotai_github_io.team.member.abdelrahman_mostafa import AbdelrahmanMostafa
+from alphaspheredotai_github_io.team.member.abdelrahman_mostafa import (
+    AbdelrahmanMostafa,
+)
 from alphaspheredotai_github_io.team.member.mohamed_hisham import MohamedHisham
 from alphaspheredotai_github_io.team.member.yousef_mohamed import YousefMohamed
 from alphaspheredotai_github_io.team.team_member import SocialLinks

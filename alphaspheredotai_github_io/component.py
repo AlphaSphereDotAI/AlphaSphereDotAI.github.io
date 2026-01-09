@@ -110,9 +110,15 @@ def team_member_card(team_member: TeamMember) -> rx.Component:
                         rx.text(team_member.bio, text_align="center"),
                         rx.flex(
                             (
-                                socialmedia_links(team_member.social_links.github, "github"),
-                                socialmedia_links(team_member.social_links.linkedin, "linkedin"),
-                                socialmedia_links(team_member.social_links.twitter, "twitter")
+                                socialmedia_links(
+                                    team_member.social_links.github, "github"
+                                ),
+                                socialmedia_links(
+                                    team_member.social_links.linkedin, "linkedin"
+                                ),
+                                socialmedia_links(
+                                    team_member.social_links.twitter, "twitter"
+                                )
                                 if team_member.social_links.twitter
                                 else None,
                             ),
