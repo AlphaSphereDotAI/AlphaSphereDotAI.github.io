@@ -1,6 +1,6 @@
 import reflex as rx
 
-from alphaspheredotai_github_io.component import navbar_icons
+from alphaspheredotai_github_io.component import navbar_icons, project_card
 
 
 def projects_page() -> rx.Component:
@@ -9,7 +9,33 @@ def projects_page() -> rx.Component:
         (
             navbar_icons(),
             rx.center(
-                rx.heading("This page is under construction", size="5", weight="bold"),
+                (
+                    project_card(
+                        title="AlphaSphereDotAI Website",
+                        description="A personal website built with Reflex to showcase projects and team members.",
+                        project_url="https://github.com/AlphaSphereDotAI/AlphaSphereDotAI.github.io",
+                    ),
+                    project_card(
+                        title="Chatacter",
+                        description="Live Chat with Virtual Character.",
+                        project_url="https://github.com/AlphaSphereDotAI/chatacter",
+                    ),
+                    project_card(
+                        title="Vocalizr",
+                        description="Voice Generator part of the Chatacter Backend.",
+                        project_url="https://github.com/AlphaSphereDotAI/vocalizr",
+                    ),
+                    project_card(
+                        title="Visualizr",
+                        description="Video Generator part of the Chatacter Backend.",
+                        project_url="https://github.com/AlphaSphereDotAI/visualizr",
+                    ),
+                    project_card(
+                        title="Chattr",
+                        description="App part of the Chatacter Backend.",
+                        project_url="https://github.com/AlphaSphereDotAI/chattr",
+                    ),
+                ),
                 justify="center",
                 align="center",
                 direction="column",

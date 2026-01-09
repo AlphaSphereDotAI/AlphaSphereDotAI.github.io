@@ -150,3 +150,31 @@ def team_member_card(team_member: TeamMember) -> rx.Component:
         size="5",
         direction="column",
     )
+
+
+def project_card(title: str, description: str, project_url: str) -> rx.Component:
+    """Create a project card component."""
+    return rx.card(
+        rx.flex(
+            (
+                rx.heading(title, size="4", weight="bold"),
+                rx.text(description),
+                rx.link(
+                    rx.button(
+                        (
+                            rx.text("View Project"),
+                            rx.icon("external-link", size=16, color="gray"),
+                        ),
+                        variant="soft",
+                    ),
+                    href=project_url,
+                    is_external=True,
+                ),
+            ),
+            direction="column",
+            align="center",
+            spacing="3",
+        ),
+        size="5",
+        direction="column",
+    )
