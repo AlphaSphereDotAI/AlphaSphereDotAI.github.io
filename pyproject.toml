@@ -1,0 +1,13 @@
+[project]
+name = "alphaspheredotai-github-io"
+version = "0.0.1"
+description = "AlphaSphereDotAI website built with Reflex."
+readme = "README.md"
+authors = [
+  { name = "Mohamed Hisham Abdelzaher", email = "mohamed.hisham.abdelzaher@gmail.com" },
+]
+requires-python = ">=3.13,<3.14"
+dependencies = ["reflex>=0.8.24.post1"]
+
+[dependency-groups]
+dev = ["ruff>=0.14.10", "ty>=0.0.10"]
