@@ -39,6 +39,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5.0.0
+        with:
+          token: ${{ secrets.GH_TOKEN }}
       - name: Install Nix
         uses: DeterminateSystems/determinate-nix-action@1d699fc25db3f9e079cd2f168ca007a4183389be # v3.15.1
         with:
@@ -49,6 +51,12 @@ jobs:
         run: nix profile install nixpkgs#devenv
       - name: Test
         run: devenv test
+      - name: Commit pre-commit fixes
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
+        if: success() || failure()
+        with:
+          commit_message: "devenv: Apply Fixes"
+          commit_options: --no-verify
   build_web:
     name: Build Web
     runs-on: ubuntu-latest
@@ -84,7 +92,6 @@ jobs:
     needs: build_web
     permissions:
       pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
