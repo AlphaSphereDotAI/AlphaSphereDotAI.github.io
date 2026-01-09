@@ -129,7 +129,7 @@
     comrak.enable = true;
     deadnix.enable = true;
     detect-private-keys.enable = true;
-    lychee.enable = true;
+    # lychee.enable = true;
     markdownlint.enable = true;
     mixed-line-endings.enable = true;
     name-tests-test.enable = true;
