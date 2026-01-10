@@ -116,7 +116,7 @@
   git-hooks.hooks = {
     action-validator.enable = true;
     actionlint.enable = true;
-    alejandra.enable = true;
+    nixfmt.enable = true;
     check-added-large-files.enable = true;
     check-builtin-literals.enable = true;
     check-case-conflicts.enable = true;
