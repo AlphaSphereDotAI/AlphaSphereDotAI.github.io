@@ -72,7 +72,7 @@ def contact_item(
     return rx.card(
         rx.flex(
             (
-                rx.avatar(src=avatar),
+                rx.image(src=avatar),
                 rx.heading(name, size="4", weight="bold"),
                 rx.text(username, color_scheme="gray"),
                 rx.link(
@@ -108,7 +108,7 @@ def team_member_card(team_member: TeamMember) -> rx.Component:
     return rx.card(
         rx.flex(
             (
-                rx.avatar(src=team_member.avatar, size="9"),
+                rx.image(src=team_member.avatar, size="9"),
                 rx.flex(
                     (
                         rx.heading(team_member.name, size="4", weight="bold"),
