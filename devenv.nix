@@ -70,7 +70,9 @@
   };
 
   # https://devenv.sh/processes/
-  # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
+  processes = {
+    dev.exec = "${lib.getExe pkgs.watchexec} -r -e py -- ${lib.getExe pkgs.uv} run reflex run --frontend-only";
+  };
 
   # https://devenv.sh/services/
   # services.postgres.enable = true;
