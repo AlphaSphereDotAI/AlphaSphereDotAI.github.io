@@ -6,9 +6,11 @@ from alphaspheredotai_github_io.team.member.mohamed_hisham import MohamedHisham
 from alphaspheredotai_github_io.team.member.yousef_mohamed import YousefMohamed
 from alphaspheredotai_github_io.team.team_member import SocialLinks
 
+AI_ENGINEER_ROLE = "AI Engineer"
+
 AbdelrahmanAminInfo = AbdelrahmanAmin(
     name="Abdelrahman Amin",
-    role="AI Engineer",
+    role=AI_ENGINEER_ROLE,
     avatar="/AbdelrahmanAmin.jpg",
     bio="",
     social_links=SocialLinks(
@@ -19,7 +21,7 @@ AbdelrahmanAminInfo = AbdelrahmanAmin(
 )
 AbdelrahmanMostafaInfo = AbdelrahmanMostafa(
     name="Abdelrahman Mostafa",
-    role="AI Engineer",
+    role=AI_ENGINEER_ROLE,
     avatar="/AbdelrahmanMostafa.jpg",
     bio="",
     social_links=SocialLinks(
@@ -30,7 +32,7 @@ AbdelrahmanMostafaInfo = AbdelrahmanMostafa(
 )
 MohamedHishamInfo = MohamedHisham(
     name="Mohamed Hisham",
-    role="AI Engineer",
+    role=AI_ENGINEER_ROLE,
     avatar="/MohamedHisham.jpg",
     bio="",
     social_links=SocialLinks(
@@ -41,7 +43,7 @@ MohamedHishamInfo = MohamedHisham(
 )
 YousefMohamedInfo = YousefMohamed(
     name="Yousef Mohamed",
-    role="AI Engineer",
+    role=AI_ENGINEER_ROLE,
     avatar="/YousefMohamed.jpg",
     bio="",
     social_links=SocialLinks(
