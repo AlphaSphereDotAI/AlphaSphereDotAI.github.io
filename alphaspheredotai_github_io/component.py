@@ -72,7 +72,7 @@ def contact_item(
     return rx.card(
         rx.flex(
             (
-                rx.image(src=avatar),
+                rx.image(src=avatar, alt=name, border_radius="25%", height="25%", width="25%"),
                 rx.heading(name, size="4", weight="bold"),
                 rx.text(username, color_scheme="gray"),
                 rx.link(
@@ -108,47 +108,47 @@ def team_member_card(team_member: TeamMember) -> rx.Component:
     return rx.card(
         rx.flex(
             (
-                rx.image(src=team_member.avatar, size="9"),
+                rx.image(
+                    src=team_member.avatar,
+                    alt=team_member.name,
+                    border_radius="25%",
+                    height="auto",
+                    width="100px",
+                ),
+                rx.heading(team_member.name, size="4", weight="bold"),
+                rx.text(team_member.role, color_scheme="gray", italic=True),
+                rx.text(team_member.bio, text_align="center"),
                 rx.flex(
                     (
-                        rx.heading(team_member.name, size="4", weight="bold"),
-                        rx.text(team_member.role, color_scheme="gray", italic=True),
-                        rx.text(team_member.bio, text_align="center"),
-                        rx.flex(
-                            (
-                                socialmedia_links(
-                                    team_member.social_links.github,
-                                    "github",
-                                ),
-                                socialmedia_links(
-                                    team_member.social_links.linkedin,
-                                    "linkedin",
-                                ),
-                                socialmedia_links(
-                                    team_member.social_links.twitter,
-                                    "twitter",
-                                )
-                                if team_member.social_links.twitter
-                                else None,
-                            ),
-                            direction="row",
-                            align="center",
-                            size="5",
-                            spacing="5",
-                            flex_wrap="wrap",
+                        socialmedia_links(
+                            team_member.social_links.github,
+                            "github",
                         ),
+                        socialmedia_links(
+                            team_member.social_links.linkedin,
+                            "linkedin",
+                        ),
+                        socialmedia_links(
+                            team_member.social_links.twitter,
+                            "twitter",
+                        )
+                        if team_member.social_links.twitter
+                        else None,
                     ),
-                    direction="column",
+                    direction="row",
                     align="center",
-                    spacing="2",
+                    justify="center",
+                    spacing="5",
+                    flex_wrap="wrap",
                 ),
             ),
             direction="column",
             align="center",
-            spacing="5",
+            justify="center",
+            spacing="2",
         ),
-        size="5",
-        direction="column",
+        align="center",
+        justify="center",
     )
 
 
