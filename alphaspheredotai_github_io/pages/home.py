@@ -13,7 +13,7 @@ def home_page() -> rx.Component:
                     src="https://raw.githubusercontent.com/AlphaSphereDotAI/.github/main/Logos/400x400.jpg",
                     alt="AlphaSphere.AI Logo",
                     border_radius="50%",
-                    height="25%",
+                    height="auto",
                     width="25%",
                 ),
                 rx.heading("AlphaSphere.AI", size="9", weight="bold"),
