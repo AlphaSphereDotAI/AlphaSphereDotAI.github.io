@@ -16,7 +16,12 @@ def home_page() -> rx.Component:
                     height="auto",
                     width="25%",
                 ),
-                rx.heading("AlphaSphere.AI", size="9", weight="bold"),
+                rx.desktop_only(
+                    rx.heading("AlphaSphere.AI", size="9", weight="bold"),
+                ),
+                rx.mobile_and_tablet(
+                    rx.heading("AlphaSphere.AI", size="7", weight="bold"),
+                ),
             ),
             spacing="5",
             justify="center",
