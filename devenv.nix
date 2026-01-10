@@ -2,7 +2,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   files = {
     ".yamllint.yaml".yaml = {
       extends = "default";
@@ -17,7 +18,7 @@
       target-version = "py313";
       line-length = 120;
       lint = {
-        fixable = ["ALL"];
+        fixable = [ "ALL" ];
         ignore = [
           "D100"
           "D105"
@@ -26,7 +27,7 @@
           "D413"
           "SIM117"
         ];
-        select = ["ALL"];
+        select = [ "ALL" ];
         isort = {
           combine-as-imports = true;
         };
@@ -57,7 +58,7 @@
   };
 
   # https://devenv.sh/packages/
-  packages = [];
+  packages = [ ];
 
   # https://devenv.sh/languages/
   languages.python = {
