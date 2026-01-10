@@ -72,7 +72,9 @@ def contact_item(
     return rx.card(
         rx.flex(
             (
-                rx.image(src=avatar, alt=name, border_radius="25%", height="25%", width="25%"),
+                rx.image(
+                    src=avatar, alt=name, border_radius="25%", height="25%", width="25%"
+                ),
                 rx.heading(name, size="4", weight="bold"),
                 rx.text(username, color_scheme="gray"),
                 rx.link(
